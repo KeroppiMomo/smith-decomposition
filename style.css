@@ -1,0 +1,3 @@
+body { background-color: #fff; }
+textarea { width: 100%; }
+#outputTextarea { overflow-y: hidden; }
