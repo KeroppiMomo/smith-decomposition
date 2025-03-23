@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Smith normal form</title>
+        <style>
+            textarea { width: 100%; }
+            #outputTextarea { overflow-y: hidden; }
+        </style>
+        <script src="script.js"></script>
+        <script>
+            function buttonOnClick() {
+                const matrixText = document.getElementById("matrixTextarea").value;
+                const matrix = eval(matrixText);
+                const output = makeOutput(matrix);
+                const outputTextarea = document.getElementById("outputTextarea");
+                outputTextarea.value = output;
+                outputTextarea.style.height = "auto";
+                outputTextarea.style.height = outputTextarea.scrollHeight + "px";
+            }
+        </script>
+    </head>
+    <body>
+        <p>Matrix (as a JavaScript array): <br>
+
+        <textarea id="matrixTextarea" rows="8">[
+    [0, 111, -36, 6], 
+    [5, -672, 210, 74], 
+    [0, -255, 81, 24], 
+    [-7, 255, -81, -10], 
+]</textarea>
+        </p>
+
+        <button onclick="buttonOnClick()">Compute</button>
+
+        <p>
+        <textarea id="outputTextarea"></textarea>
+        </p>
+    </body>
+</html>
